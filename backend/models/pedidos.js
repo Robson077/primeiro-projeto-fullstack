@@ -1,6 +1,11 @@
 import mongoose from "mongoose";
+import user from "./user.js";
 
 const pedidosSchema = mongoose.Schema({
+    client: {
+        type: [user]
+    },
+
     produto: {
         type: String,
         required: true
